@@ -1,9 +1,9 @@
 const fs = require('fs');
-const filePath = require('./pwd');
 
-module.exports = function () {
+module.exports = function (filePath) {
   fs.readFile(filePath, (err, data) => {
     if (err) throw err;
-    console.log(data)
+    console.log('\n' + data.toString());
+
   })
 }
